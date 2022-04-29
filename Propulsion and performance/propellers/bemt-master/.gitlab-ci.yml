@@ -1,0 +1,37 @@
+---
+push-wiki:
+  # Following methodology in https://gitlab.com/gitlab-org/gitlab/-/issues/16261
+  image: bitnami/git
+  script:
+    - export WIKI_URL="${CI_SERVER_PROTOCOL}://project_${CI_PROJECT_ID}_bot:${BOT_TOKEN}@${CI_SERVER_HOST}:${CI_SERVER_PORT}/${CI_PROJECT_PATH}.wiki.git"
+
+    # Remove old clone and re-clone the project's wiki
+    - rm -rf "/tmp/${CI_PROJECT_NAME}.wiki"
+    - git clone "${WIKI_URL}" "/tmp/${CI_PROJECT_NAME}.wiki"
+
+    # remove everyting from the wiki and copy docs/ content to it
+    - rm -rf "/tmp/${CI_PROJECT_NAME}.wiki/*"
+    - cp -r docs/* "/tmp/${CI_PROJECT_NAME}.wiki/"
+
+    # enter the cloned wiki
+    - cd "/tmp/${CI_PROJECT_NAME}.wiki"
+
+    # edit the links to work with wiki
+    - sed -i -E "s|(\(docs/)|\(|g" *.md
+    - sed -i -E "s|(.md\))|\)|g" *.md
+    - sed -i -E "s|(.md\#)|\#|g" *.md
+
+    # set committer info
+    - git config user.name "$GITLAB_USER_NAME"
+    - git config user.email "$GITLAB_USER_EMAIL"
+
+    # commit everything and push to master
+    - git add --all
+    - git commit -m "Pushed docs with CI"
+    - git push origin "HEAD:master"
+
+  only:
+    refs:
+      - master
+    changes:
+      - docs/*

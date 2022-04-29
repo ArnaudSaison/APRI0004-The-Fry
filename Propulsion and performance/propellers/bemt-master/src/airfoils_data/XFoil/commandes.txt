@@ -1,0 +1,85 @@
+load mh114.dat
+pane
+oper
+v 50000
+iter 500
+pacc 
+mh114_50000.txt
+
+aseq -15 15 0.1
+
+
+
+load mh117.dat
+pane
+oper
+iter 500
+v 500000
+pacc
+mh117_400000.txt
+
+aseq -7 20 0.1
+
+quit
+
+
+
+
+
+
+
+
+
+
+
+load mh114.dat
+pane
+oper
+iter 500
+v 50000
+pacc
+mh117_50000.txt
+
+aseq -7 20 0.1
+
+quit
+
+
+
+
+
+
+load mh114.dat
+pane
+oper
+iter 500
+v 1200000
+pacc
+mh114_1200000.txt
+
+aseq -7 20 0.2
+
+quit
+
+
+
+
+
+
+
+
+
+load mh117.dat
+pane
+oper
+iter 500
+v 1300000
+pacc
+mh117_1300000.txt
+
+aseq -7 20 0.2
+
+quit
+
+
+

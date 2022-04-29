@@ -1,0 +1,152 @@
+load mh117.dat
+pane
+oper
+iter 500
+v 50000
+pacc
+mh117_50000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 100000
+pacc
+mh117_100000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 200000
+pacc
+mh117_200000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 300000
+pacc
+mh117_300000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 400000
+pacc
+mh117_400000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 500000
+pacc
+mh117_500000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 600000
+pacc
+mh117_600000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 700000
+pacc
+mh117_700000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 800000
+pacc
+mh117_800000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 900000
+pacc
+mh117_900000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 1000000
+pacc
+mh117_1000000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 1100000
+pacc
+mh117_1100000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 1200000
+pacc
+mh117_1200000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 1300000
+pacc
+mh117_1300000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 1400000
+pacc
+mh117_1400000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 1500000
+pacc
+mh117_1500000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 1600000
+pacc
+mh117_1600000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 1700000
+pacc
+mh117_1700000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 1800000
+pacc
+mh117_1800000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 1900000
+pacc
+mh117_1900000.txt
+
+aseq -5 25 0.2
+pacc
+init
+re 2000000
+pacc
+mh117_2000000.txt
+
+aseq -5 25 0.2
+pacc 
+
+quit

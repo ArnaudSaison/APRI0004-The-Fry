@@ -1,0 +1,8 @@
+# Files to ignore
+*.DS_Store
+*.m~
+*.mexw64
+*.mexmaci64
+
+# Folders to ignore
+tests/
