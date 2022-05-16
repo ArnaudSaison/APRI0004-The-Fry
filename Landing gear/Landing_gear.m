@@ -87,7 +87,7 @@ H_1= length_tot_gear_main + cg_height; %[m] cg to ground
 
 h_1= length_tot_gear_main + tail_height; %[m] tail to ground
 
-alpha=15; %[°] angle imposed tipback angle
+alpha=14.5; %[°] angle imposed tipback angle
 
 l_1=h_1/(tan(alpha*pi/180)); %[m] horizontal distance btw main gear and tail
 
